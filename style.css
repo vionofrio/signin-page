@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: "Inter", sans-serif;
+  min-height: 100dvh;
+  background-color: hsl(220, 100%, 99%);
+}
+
+main section:first-child > div > div:first-child {
+  display: grid;
+  gap: 3.5rem;
+}
+
+section:first-child {
+  padding: 5.5rem 1.5rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+figcaption {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  color: hsl(218, 24%, 27%);
+}
+
+.headline p {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: hsl(221, 13%, 46%);
+}
+
+form > div {
+  display: grid;
+  gap: 1.25rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: hsl(218, 24%, 27%);
+}
+
+label + input {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid hsl(217, 16%, 84%);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  color: hsl(221, 13%, 46%);
+}
+
+label + input:focus {
+  outline: none;
+}
+
+form div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+form div:last-child div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  aspect-ratio: 1;
+  border: 1px solid hsl(217, 16%, 84%);
+  border-radius: 0.25rem;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+form div:last-child a {
+  color: hsl(252, 100%, 58%);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+form button {
+  margin-top: 2rem;
+  background-color: hsl(252, 100%, 58%);
+  color: hsl(0, 0%, 100%);
+}
+
+main section:first-child > div > div > button {
+  margin-top: 1rem;
+  border: 1px solid hsl(217, 16%, 84%);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(218, 24%, 27%);
+}
+
+main section:first-child > div > div > p {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 1.25rem;
+  color: hsl(218, 24%, 27%);
+}
+
+main section:first-child > div > div p a {
+  color: hsl(252, 100%, 58%);
+}
+
+.attribution {
+  font-style: italic;
+  text-align: center;
+  margin-top: 3.75rem;
+  color: hsl(221, 13%, 46%);
+}
+
+.attribution a {
+  color: hsl(252, 100%, 58%);
+}
+
+@media only screen and (min-width: 75rem) {
+  figure {
+    position: absolute;
+    inset: 0 auto auto 0;
+    flex-direction: row;
+  }
+
+  body {
+    display: block;
+    height: 60rem;
+  }
+
+  main {
+    display: flex;
+    gap: 4.375rem;
+    min-height: 100%;
+    padding: 2rem;
+  }
+
+  section {
+    flex: 1;
+  }
+
+  section:first-child {
+    position: relative;
+    display: grid;
+    align-items: center;
+    padding: 0;
+  }
+
+  section:first-child > div {
+    padding: 0 4.375rem;
+  }
+
+  section:first-child > div > *:not(.attribution) {
+    padding: 0 4.375rem;
+  }
+
+  section:last-child {
+    border-radius: 2.5rem;
+    background: hsl(238, 39%, 85%) url(./images/DRIP_20.svg) no-repeat center /
+      contain;
+  }
+
+  .attribution {
+    position: absolute;
+    inset: auto auto 0 0;
+  }
+}
