@@ -11,16 +11,17 @@ body {
   place-content: center;
   font-family: "Inter", sans-serif;
   min-height: 100dvh;
+  padding: 5.5rem 0;
   background-color: hsl(220, 100%, 99%);
+}
+
+main {
+  margin: 0 1.5rem;
 }
 
 main section:first-child > div > div:first-child {
   display: grid;
   gap: 3.5rem;
-}
-
-section:first-child {
-  padding: 5.5rem 1.5rem;
 }
 
 figure {
@@ -154,12 +155,14 @@ main section:first-child > div > div p a {
   body {
     display: block;
     height: 60rem;
+    padding: 0;
   }
 
   main {
     display: flex;
     gap: 4.375rem;
     min-height: 100%;
+    margin: 0;
     padding: 2rem;
   }
 
@@ -171,7 +174,6 @@ main section:first-child > div > div p a {
     position: relative;
     display: grid;
     align-items: center;
-    padding: 0;
   }
 
   section:first-child > div {
