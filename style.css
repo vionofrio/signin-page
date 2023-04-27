@@ -154,12 +154,6 @@ main section:first-child > div > div p a {
 }
 
 @media only screen and (min-width: 75rem) {
-  figure {
-    position: absolute;
-    inset: 0 auto auto 0;
-    flex-direction: row;
-  }
-
   body {
     display: block;
     height: 60rem;
@@ -168,7 +162,6 @@ main section:first-child > div > div p a {
 
   main {
     display: flex;
-    gap: 4.375rem;
     min-height: 100%;
     margin: 0;
     padding: 2rem;
@@ -181,25 +174,27 @@ main section:first-child > div > div p a {
   section:first-child {
     position: relative;
     display: grid;
-    align-items: center;
-  }
-
-  section:first-child > div {
-    padding: 0 4.375rem;
+    place-items: center;
   }
 
   section:first-child > div > *:not(.attribution) {
     padding: 0 4.375rem;
   }
 
-  section:last-child {
-    border-radius: 2.5rem;
-    background: hsl(238, 39%, 85%) url(./images/DRIP_20.svg) no-repeat center /
-      contain;
+  figure {
+    position: absolute;
+    inset: 0 auto auto 0;
+    flex-direction: row;
   }
 
   .attribution {
     position: absolute;
     inset: auto auto 0 0;
+  }
+
+  section:last-child {
+    border-radius: 2.5rem;
+    background: hsl(238, 39%, 85%) url(./images/DRIP_20.svg) no-repeat center /
+      contain;
   }
 }
