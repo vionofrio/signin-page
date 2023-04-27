@@ -19,7 +19,7 @@ main {
   margin: 0 1.5rem;
 }
 
-main section:first-child > div > div:first-child {
+main section:first-child > div:first-child {
   display: grid;
   gap: 3.5rem;
 }
@@ -58,32 +58,55 @@ form > div {
   color: hsl(218, 24%, 27%);
 }
 
-label + input {
+label + div {
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+label + div input {
   display: block;
   width: 100%;
-  margin-top: 0.5rem;
   border: 1px solid hsl(217, 16%, 84%);
   border-radius: 0.5rem;
-  padding: 0.625rem 0.875rem;
+  padding: 0.625rem calc(0.875rem * 2 + 1.5rem) 0.625rem 0.875rem;
   color: hsl(221, 13%, 46%);
 }
 
-label + input:focus {
+label + div input:focus {
   outline: none;
 }
 
-form div:last-child {
+label + div button {
+  position: absolute;
+  right: 0.875rem;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+#email + button {
+  background: url(./images/X\ Icon.svg) no-repeat center / contain;
+}
+
+#password + button {
+  background: url(./images/Hide\ Icon.svg) no-repeat center / contain;
+}
+
+form > div > div:last-child {
   display: flex;
   justify-content: space-between;
 }
 
-form div:last-child div {
+form > div > div:last-child div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-form div:last-child div > * {
+form > div > div:last-child div > * {
   cursor: pointer;
 }
 
@@ -103,11 +126,11 @@ a {
   text-decoration: none;
 }
 
-form div:last-child a {
+form > div > div:last-child a {
   color: hsl(252, 100%, 58%);
 }
 
-button {
+button:not(label + div button) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,27 +141,27 @@ button {
   cursor: pointer;
 }
 
-form button {
+form > button {
   margin-top: 2rem;
   background-color: hsl(252, 100%, 58%);
   color: hsl(0, 0%, 100%);
 }
 
-main section:first-child > div > div > button {
+main section:first-child > div > button {
   margin-top: 1rem;
   border: 1px solid hsl(217, 16%, 84%);
   background-color: hsl(0, 0%, 100%);
   color: hsl(218, 24%, 27%);
 }
 
-main section:first-child > div > div > p {
+main section:first-child > div > p {
   font-size: 0.875rem;
   text-align: center;
   margin-top: 1.25rem;
   color: hsl(218, 24%, 27%);
 }
 
-main section:first-child > div > div p a {
+main section:first-child > div p a {
   color: hsl(252, 100%, 58%);
 }
 
@@ -174,11 +197,7 @@ main section:first-child > div > div p a {
   section:first-child {
     position: relative;
     display: grid;
-    place-items: center;
-  }
-
-  section:first-child > div > *:not(.attribution) {
-    padding: 0 4.375rem;
+    place-content: center;
   }
 
   figure {
